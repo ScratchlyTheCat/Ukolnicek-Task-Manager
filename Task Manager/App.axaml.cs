@@ -1,10 +1,11 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 
 namespace Task_Manager;
 
-public partial class App : Application
+public partial class MainView : Application
 {
     public override void Initialize()
     {
@@ -20,4 +21,5 @@ public partial class App : Application
 
         base.OnFrameworkInitializationCompleted();
     }
+    
 }

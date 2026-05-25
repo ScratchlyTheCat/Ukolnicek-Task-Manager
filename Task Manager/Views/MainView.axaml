@@ -12,8 +12,34 @@
             x:Name="TasksNameBox"
             PlaceholderText="Zde zadejte svůj úkol"
             FontSize="18"
-            
+        
         />
+        
+        <TextBlock Text="Termín dokončení:" FontSize="16"/>
+
+        <DatePicker
+            x:Name="DueDatePicker"
+        />
+
+        <TextBlock Text="Barva štítku:" FontSize="16"/>
+
+        <ComboBox
+            x:Name="ColorComboBox"
+            SelectedIndex="0">
+
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Yellow"/>
+
+        </ComboBox>
+
+        <CheckBox
+            x:Name="CompletedCheckBox"
+            FontSize="16">
+            Hotovo
+        </CheckBox>
+
         
         <Button
             Content="Vytvořit úkol"
@@ -34,4 +60,4 @@
         />
     </StackPanel>
     
-</UserControl>
+</UserControl

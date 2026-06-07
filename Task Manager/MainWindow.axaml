@@ -1,76 +1,11 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Task_Manager.Views.MainView">
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:views="clr-namespace:Task_Manager.Views"
+        x:Class="Task_Manager.Views.MainWindow"
+        Title="Task Manager"
+        Width="1000" Height="780"
+        WindowStartupLocation="CenterScreen">
+        
+    <views:MainView />
     
-    <StackPanel Margin="20" Spacing="10">
-        <TextBlock Text="Úkoly" FontSize="30"/>
-        
-        <TextBox
-            x:Name="TasksNameBox"
-            PlaceholderText="Zde zadejte svůj úkol"
-            FontSize="18"
-        
-        />
-        
-        <TextBlock Text="Termín dokončení:" FontSize="16"/>
-
-        <DatePicker
-            x:Name="DueDatePicker"
-        />
-
-        <TextBlock Text="Barva štítku:" FontSize="16"/>
-
-        <ComboBox
-            x:Name="ColorComboBox"
-            SelectedIndex="0">
-
-            <ComboBoxItem Content="Blue"/>
-            <ComboBoxItem Content="Red"/>
-            <ComboBoxItem Content="Green"/>
-            <ComboBoxItem Content="Yellow"/>
-
-        </ComboBox>
-
-        
-
-        
-        <Button
-            Content="Vytvořit úkol"
-            Click="VytvoritUkol_OnClick"
-            Width="220"
-        />
-        <Button
-            Content="Export do TXT"
-            Click="ExportToTxt_OnClick"
-            Width="220"
-        />
-        
-        <Button
-            Content="Zobrazit notifikace"
-            Click="ShowNotifications_OnClick"
-            Width="220"
-        />
-        
-        <Button
-            Content="Přepnout Dark/Light mode"
-            Click="ToggleTheme_OnClick"
-            Width="220"
-        />
-        
-        <ListBox
-            x:Name="TasksListBox"
-            Height="250"
-            Width="440"
-        />
-        
-        <TextBlock
-            x:Name="TasksInfoText"
-            Text="Zatím tu nejsou žádné úkoly"
-            FontSize="18"
-        />
-    </StackPanel>
-    
-</UserControl>
+</Window>

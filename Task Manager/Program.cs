@@ -14,7 +14,7 @@ class Program
 
     // Avalonia configuration, don't remove; also used by visual designer.
     public static AppBuilder BuildAvaloniaApp()
-        => AppBuilder.Configure<MainView>()
+        => AppBuilder.Configure<App>() // Changed from MainView to App
             .UsePlatformDetect()
 #if DEBUG
             .WithDeveloperTools()
